@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Rafael Henrique de Sousa Vieira">
+  <meta name="keywords"
+    content="programação, html, css, frontend mentor, Product preview card component, Rafael Henrique de Sousa Vieira, Cartão de Produto, Frontend, Front, end">
+  <meta name="robots" content="index, follow">
+  <meta name="description"
+    content="This HTML & CSS-only challenge will be perfect for anyone starting to build responsive projects.">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@400;500;700&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: hsl(30, 38%, 92%);
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 37.5rem;
+      max-height: 29.063rem;
+      background-color: hsl(0, 0%, 100%);
+      border-radius: 1rem;
+    }
+
+    .image .desktop {
+      display: flex;
+      align-items: center;
+      border-radius: 1rem 0 0 1rem;
+      height: auto;
+      max-width: 18.75rem;
+      height: 29.063rem;
+    }
+
+    .image .mobile {
+      display: none;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      max-width: 18.75rem;
+      padding: 2rem;
+      height: 100%;
+    }
+
+    .perfume {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 0.2rem;
+    }
+
+    .text h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      line-height: 2rem;
+      padding: 1rem 2rem 1rem 0;
+      color: hsl(212, 21%, 14%);
+    }
+
+    .text .paragrafo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.5rem;
+      padding-bottom: 2rem;
+      color: hsl(212, 21%, 14%);
+    }
+
+    .price {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 2rem;
+    }
+
+    .price .primeiro {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: hsl(158, 36%, 37%);
+      font-size: 32px;
+      padding-right: 1rem;
+    }
+
+    .price .segundo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      text-decoration: line-through;
+      color: hsl(212, 21%, 14%);
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3.5rem;
+      gap: 1rem;
+      border: none;
+      border-radius: 1rem;
+      color: hsl(0, 0%, 100%);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      background-color: hsl(158, 36%, 37%);
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    button:hover {
+      background-color: hsl(158, 30%, 25%);
+    }
+
+    .attribution {
+      position: absolute;
+      bottom: 0;
+      margin: 1rem 0;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    @media screen and (max-width: 540px) {
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 37.5rem;
+        max-height: 35rem;
+        padding: 0 0 3rem 0;
+      }
+
+      .image .desktop {
+        display: none;
+      }
+
+      .image .mobile {
+        display: flex;
+        width: 350px;
+        border-radius: 1rem 1rem 0 0;
+      }
+
+      .text {
+        padding: 1rem 0 0 1rem;
+      }
+
+      .text h1 {
+        padding: 0.5rem 0 0.5rem 0;
+      }
+
+      .text .paragrafo {
+        padding-bottom: 0;
+      }
+
+      .price {
+        padding: 1rem 0;
+      }
+
+      .price .primeiro {
+        font-size: 32px;
+      }
+
+      .price .segundo {
+        font-size: 14px;
+      }
+
+      button {
+        height: 2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="image">
+      <img class="desktop" src="/HTML/Cartão de Produto/images/image-product-desktop.jpg"
+        alt="image-product-desktop.jpg">
+      <img class="mobile" src="/HTML/Cartão de Produto/images/image-product-mobile.jpg" alt="image-product-mobile.jpg">
+    </div>
+
+    <div class="text">
+      <p class="perfume">PERFUME</p>
+      <h1><strong>Gabrielle Essence Eau De Parfum</strong></h1>
+      <p class="paragrafo">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+        Perfumer-Creator for the House of CHANEL.</p>
+      <div class="price">
+        <p class="primeiro"><strong>$149.99</strong></p>
+        <p class="segundo">$169.99</p>
+      </div>
+      <button><img src="/HTML/Cartão de Produto/images/icon-cart.svg" alt="icon-cart.svg">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/RafaelHDSV" target="_blank">Rafael Henrique de Sousa Vieira</a>.
+  </div>
+</body>
+
+</html>
